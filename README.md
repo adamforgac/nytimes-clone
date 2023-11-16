@@ -1,2 +1,2 @@
 # nytimes-clone
-Cloning the nytimes.com 
+Cloning the nytimes.com
