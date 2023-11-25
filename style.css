@@ -150,6 +150,13 @@ table {
   --time-status: #727272;
 }
 
+.mid-border {
+  width: 1px;
+  height: 100%;
+  color: var(--light-border);
+  background-color: var(--light-border);
+}
+
 .underlined-first {
   border-bottom: 1px solid var(--light-border);
   padding-bottom: 15px;
@@ -184,6 +191,21 @@ table {
   font-weight: 800;
 }
 
+.third-heading-next {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 1.5em;
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
+  font-weight: 700;
+}
+
+.third-heading-more-news {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.125rem;
+  line-height: 1.2em;
+  letter-spacing: 0.01em;
+}
+
 .third-heading-thinner {
   font-family: 'Martel', serif;
   font-size: 1.5rem;
@@ -193,10 +215,10 @@ table {
 
 .third-heading-smaller {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   line-height: 1.2em;
   letter-spacing: 0.01em;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .third-heading-author {
@@ -408,6 +430,16 @@ table {
   font-weight: 500;
 }
 
+.next-paragraph {
+  font-family: 'Martel', serif;
+  margin-top: 0.25rem;
+  color: var(--main-par);
+  font-size: 0.775rem;
+  line-height: 1.1875rem;
+  letter-spacing: 0.1px;
+  font-weight: 500;
+}
+
 .time-status {
   margin-top: 0.25rem;
   display: block;
@@ -421,6 +453,7 @@ table {
 .img-article-img img {
   width: 91px;
   height: 91px;
+  transform: translateY(7px);
 }
 
 /* ICONS */
@@ -638,7 +671,7 @@ main {
 
 .first-article-news-basic {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto min-content;
   grid-template-rows: repeat(3, min-content);
   gap: 10px;
   border-bottom: 1px solid black;
@@ -680,7 +713,6 @@ main {
 
 .main-news-universal img {
   width: 521px;
-  height: 347px;
 }
 
 .navigation-buttons {
@@ -740,7 +772,7 @@ main {
 
 .image-article {
   display: grid;
-  grid-template-columns: min-content minmax(250px, auto);
+  grid-template-columns: min-content auto;
   gap: 13px;
 }
 
@@ -880,12 +912,18 @@ aside {
   grid-column: 1 / -1;
   display: grid;
   grid-template-rows: min-content auto;
-  width: 100vw;
-  margin-left: calc((96.3% - 100vw) / 2);
+  width: calc(100vw);
+  margin-left: calc((100% - 100vw) / 2);
   overflow: hidden;
   background-color: black;
   margin-top: 40px;
   margin-bottom: 40px;
+}
+
+.middle-ad img {
+  width: calc(100% + 6px);
+  transform: translateX(-3px);
+  overflow: hidden;
 }
 
 .ad-announcment {
@@ -898,21 +936,151 @@ aside {
   padding: 11px 0 10px 0;
 }
 
-.middle-ad img {
+/* MORE NEWS SECTION */
+/* MORE NEWS SECTION */
+/* MORE NEWS SECTION */
+
+.more-news {
+  border-top: 1px solid black;
+}
+
+.specific-section {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-rows: min-content auto;
+  gap: 10px;
+  border-bottom: 1px solid black;
+  padding: 10px 0 24px 0;
+}
+
+.specific-section-heading h3 {
+  font-size: 0.875rem;
+  line-height: 1.3em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.more-news-articles {
+  display: grid;
+  grid-template-columns: auto min-content 345px;
+}
+
+.more-news-text {
+  display: grid;
+  grid-template-rows: repeat(3, min-content);
+  padding-right: 20px;
+}
+
+.more-news-image article {
+  display: grid;
+  grid-template-rows: min-content min-content;
+  gap: 20px;
+}
+
+.more-news-image {
+  padding: 0 15px;
+  border-left: 1px solid var(--light-border);
+  border-right: 1px solid var(--light-border);
+}
+
+.more-news-articles img {
+  width: 521px;
+}
+
+/* WELL SECTION */
+/* WELL SECTION */
+/* WELL SECTION */
+
+.well-articles {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+}
+
+.well-articles article {
+  position: relative;
+}
+
+.well-articles article:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 1px;
+  height: 100%;
+  background-color: var(--light-border);
+}
+
+.well img {
   width: 100%;
 }
 
-/* SECOND ARTICLE */
-/* SECOND ARTICLE */
-/* SECOND ARTICLE */
+/* CULTURE AND LIFESTYLE */
+/* CULTURE AND LIFESTYLE */
+/* CULTURE AND LIFESTYLE */
 
-.second-articles {
-  border: 2px solid red;
+.culture {
+  border-top: 1px solid black;
 }
 
-.more-news {
-  font-size: 0.875rem;
-  line-height: 1.0625rem;
-  font-family: 'Libre Franklin', sans-serif;
-  font-weight: 700;
+.culture-articles {
+  display: grid;
+  grid-template-columns: auto 345px;
+}
+
+.culture-main {
+  display: grid;
+  grid-template-rows: auto min-content;
+  justify-items: center;
+  gap: 20px;
+}
+
+.culture-text {
+  width: 70%;
+}
+
+.culture-text h3,
+.culture-text p,
+.culture-text span {
+  text-align: center;
+}
+
+.culture-aside {
+  display: grid;
+  grid-template-rows: min-content min-content;
+  gap: 30px;
+  border-left: 1px solid var(--light-border);
+  padding-left: 15px;
+}
+
+.double1,
+.double2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  position: relative;
+}
+
+.culture-aside article {
+  position: relative;
+}
+
+.double1 article:not(:last-child)::after,
+.double2 article:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -10px;
+  width: 1px;
+  height: 100%;
+  background-color: var(--light-border);
+}
+
+.double2::after {
+  content: '';
+  position: absolute;
+  top: -17px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--light-border);
 }
