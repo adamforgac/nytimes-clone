@@ -1,1 +1,0 @@
-// alert("Responzivita, přístupnost a ostatní věci, co nejsou dodělány, budou hotovy do 2 týdnů");
