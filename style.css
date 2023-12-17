@@ -105,7 +105,6 @@ body {
   line-height: 1;
   display: grid;
   grid-template-rows: auto min-content;
-  justify-items: center;
 }
 
 ol,
@@ -268,7 +267,7 @@ table {
 
 .text-image-2-col {
   display: grid;
-  grid-template-columns: auto min-content;
+  grid-template-columns: clamp(290px, 300px, 300px) auto;
   padding-right: 17px;
   gap: 20px;
   border-right: 1px solid var(--light-border);
@@ -279,7 +278,7 @@ table {
 }
 
 .text-image-2-col video {
-  width: 275px;
+  width: 100%;
   height: 100%;
 }
 
@@ -495,7 +494,9 @@ table {
   grid-auto-rows: min-content;
   grid-auto-flow: row;
   width: 1200px;
-  border-top: 1px solid rgb(82, 82, 82);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 3%;
 }
 
 /* AD BANNER */
@@ -524,7 +525,30 @@ header {
   margin-top: 10px;
 }
 
-.contries-panel {
+.phone-user {
+  display: none;
+}
+
+.subscription {
+  margin-left: auto;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.6s ease 0s;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-color: transparent;
+  color: rgb(50, 104, 145);
+  display: inline-block;
+  font-size: 10px;
+  font-family: 'Libre Franklin', sans-serif;
+  display: none;
+}
+
+.control-button {
+  display: none;
+}
+
+.countries-panel {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -673,7 +697,7 @@ main {
   border-top: 1px solid black;
   margin-top: 3px;
   display: grid;
-  grid-template-columns: auto 345px;
+  grid-template-columns: auto minmax(300px, 1fr);
   grid-auto-rows: auto;
   padding: 20px 0 40px 0;
 }
@@ -688,11 +712,40 @@ main {
 
 .first-article-news-basic {
   display: grid;
-  grid-template-columns: auto min-content;
-  grid-template-rows: repeat(3, min-content);
+  grid-template-columns: clamp(250px, 250px, 300px) minmax(430px, auto);
+  grid-auto-rows: min-content;
   gap: 10px;
   border-bottom: 1px solid black;
 }
+
+/* TRY */
+/* TRY */
+/* TRY */
+
+.first-article-news-basic article {
+  grid-column: 1 / 2;
+}
+
+.first-article-news-basic > figure {
+  grid-column: 2 / -1;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+.group-1 > figure img {
+  width: 100%;
+  max-height: 90%;
+}
+
+.first-articles .first-article-news-basic:not(:first-child) > figure img,
+.first-articles .first-article-news-basic:not(:first-child) video {
+  width: 100%;
+  max-height: 95%;
+}
+
+/* TRY */
+/* TRY */
+/* TRY */
 
 .first-article-news-full-image {
   display: grid;
@@ -709,6 +762,19 @@ main {
   border-bottom: 1px solid black;
   gap: 23px;
   padding-bottom: 20px;
+}
+
+.first-list-phone {
+  display: none !important;
+}
+
+.list-chapters ul::-webkit-scrollbar {
+  display: none;
+}
+
+.list-chapters ul {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .full-image-article {
@@ -729,7 +795,7 @@ main {
 }
 
 .main-news-universal img {
-  width: 521px;
+  width: 100%;
 }
 
 .navigation-buttons {
@@ -781,10 +847,7 @@ main {
 }
 
 .main-news-universal video {
-  width: 521px;
-}
-
-.group-1 article {
+  width: 100%;
 }
 
 .image-article {
@@ -843,9 +906,12 @@ aside {
   grid-auto-flow: row;
 }
 
+.specific-section,
+.specific-section-ad {
+}
+
 .image-above-text {
   display: grid;
-  grid-auto-rows: auto;
   grid-auto-rows: min-content;
   gap: 10px;
 }
@@ -900,6 +966,11 @@ aside {
   height: 90px;
 }
 
+.heading-group {
+  display: grid;
+  grid-template-rows: min-content min-content;
+}
+
 .aside-group-4 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -952,6 +1023,10 @@ aside {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 10px;
   padding: 11px 0 10px 0;
+}
+
+.first-couple article:last-child {
+  border: none;
 }
 
 /* MORE NEWS SECTION */
@@ -1184,6 +1259,10 @@ aside {
   gap: 20px;
 }
 
+.wirecutter {
+  border-top: 1px solid black;
+}
+
 .wirecutter-image img {
   width: 521px;
 }
@@ -1286,6 +1365,10 @@ footer {
   display: grid;
   grid-template-rows: repeat(3, min-content);
   gap: 20px;
+}
+
+.article-types-phone-version {
+  display: none;
 }
 
 .list-content {
@@ -1397,4 +1480,22 @@ footer img {
 .author-clone i {
   color: white;
   font-size: 3rem;
+}
+
+/* FIGCAPTION */
+/* FIGCAPTION */
+/* FIGCAPTION */
+
+.fig {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.56rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--time-status);
+  line-height: 1.2em;
+}
+
+.group-9 .fig {
+  margin-top: -10px;
+  margin-bottom: 5px;
 }
