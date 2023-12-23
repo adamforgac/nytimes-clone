@@ -345,6 +345,11 @@ table {
   grid-template-rows: auto auto;
 }
 
+.group-11-articles article {
+  display: grid;
+  grid-template-rows: min-content;
+}
+
 .quadruple-article article:first-child,
 .quadruple-article article:nth-child(2) {
   border-bottom: 1px solid var(--light-border);
@@ -1523,4 +1528,15 @@ footer img {
 .group-9 .fig {
   margin-top: -10px;
   margin-bottom: 5px;
+}
+
+/* none */
+
+/* 340 */
+
+.first-articles {
+}
+
+.first-articles .image-article {
+  display: none;
 }
