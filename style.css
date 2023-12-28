@@ -603,15 +603,15 @@ header {
   position: relative;
 }
 
-.offer-buttons button:first-child {
+.offer-buttons a:first-child {
   margin-right: 7px;
 }
 
-.offer-buttons button:last-child {
+.offer-buttons a:last-child {
   margin-left: 7px;
 }
 
-.offer-buttons button {
+.offer-buttons a {
   background-color: var(--button-color);
   padding: 8px 12px;
   color: white;
@@ -839,6 +839,11 @@ main {
   margin-right: 5px;
 }
 
+.navigation-article-arrows button {
+  background-color: transparent;
+  border: none;
+}
+
 .navigation-arrows span,
 .navigation-article-arrows span {
   border: 1px solid rgb(213, 213, 213);
@@ -957,7 +962,7 @@ aside {
 }
 
 .aside-group-2 article:first-child,
-.aside-group-4 article:first-child {
+.aside-group-4 a:first-child article {
   padding-right: 15px;
   border-right: 1px solid var(--light-border);
 }
@@ -971,7 +976,7 @@ aside {
   grid-template-columns: 1fr;
 }
 
-.aside-group-4 article:nth-child(2) {
+.aside-group-4 a:nth-child(2) {
   padding-left: 15px;
 }
 
@@ -1026,6 +1031,11 @@ aside {
   margin-top: 10px;
 }
 
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
 .middle-ad img {
   width: calc(100% + 6px);
   transform: translateX(-3px);
@@ -1047,13 +1057,13 @@ aside {
 }
 
 .first-couple article,
-.second-couple article:not(:last-child) {
+.second-couple a:not(:last-child) {
   grid-template-rows: 1fr;
   grid-template-columns: auto min-content;
   align-items: center;
 }
 
-.second-couple article:last-child {
+.second-couple a:last-child {
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-rows: min-content;
@@ -1166,6 +1176,12 @@ aside {
   gap: 20px;
 }
 
+.culture-main a:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .culture-text {
   width: 70%;
 }
@@ -1192,12 +1208,12 @@ aside {
   position: relative;
 }
 
-.culture-aside article {
+.culture-aside a {
   position: relative;
 }
 
-.double1 article:not(:last-child)::after,
-.double2 article:not(:last-child)::after {
+.double1 a:not(:last-child)::after,
+.double2 a:not(:last-child)::after {
   content: '';
   position: absolute;
   top: 0;
@@ -1301,7 +1317,6 @@ aside {
 }
 
 a {
-
 }
 
 .wirecutter-main article {
@@ -1341,6 +1356,10 @@ a {
 }
 
 .double-row article {
+  width: 100%;
+}
+
+.double-row a {
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -1360,7 +1379,7 @@ a {
   padding-top: 20px;
 }
 
-.double-row article:not(:last-child)::after {
+.double-row a:not(:last-child)::after {
   content: '';
   position: absolute;
   top: 0;
@@ -1382,7 +1401,7 @@ a {
 }
 
 .article-types-heading {
-  font-size: 0.8125rem;
+  font-size: 0.9rem;
   line-height: 1.375rem;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
@@ -1404,7 +1423,7 @@ a {
 
 .article-types article {
   display: grid;
-  grid-template-rows: min-content min-content repeat(3, auto);
+  grid-template-rows: repeat(5, min-content);
   gap: 7px;
 }
 
