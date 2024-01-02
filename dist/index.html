@@ -68,11 +68,11 @@
           <picture>
             <source
               media="(max-width: 740px)"
-              srcset="images-phone/new-ad-phone.jpg"
+              srcset="images-phone/new-ad-phone.webp"
             />
 
             <img
-              src="images/new-ad-desktop.jpg"
+              src="images/new-ad-desktop.webp"
               alt="Advertisement of Springfree trampoline."
             />
           </picture>
@@ -84,12 +84,12 @@
       <header>
         <div class="countries-panel">
           <div class="header-icons">
-            <a href="#"
-              ><span class="material-symbols-outlined"> menu </span></a
-            >
-            <a href="#"
-              ><span class="material-symbols-outlined"> search </span></a
-            >
+            <button>
+              <span class="material-symbols-outlined"> menu </span>
+            </button>
+            <button>
+              <span class="material-symbols-outlined"> search </span>
+            </button>
           </div>
 
           <ul class="countries-list">
@@ -111,24 +111,27 @@
         </div>
 
         <div class="logo-panel">
-          <time datetime="2011-11-18">
+          <time id="dynamicDate" datetime="2011-11-18">
             Friday, November 17, 2023 <br />
-            <span class="papers-date">Today’s Paper</span>
+            <a href="#" class="papers-date">Today’s Paper</a>
           </time>
 
           <h1>
-            <img
-              class="logo"
-              src="images/nylogo-svg.png"
-              alt="The New York Times logo."
-            />
+            <a href="#">
+              <img
+                class="logo"
+                src="images/nylogo-svg.png"
+                alt="The New York Times logo."
+              />
+            </a>
           </h1>
 
           <span class="subscription">SUBSCRIBE FOR €0.50/WEEK</span>
 
           <div class="stocks-info">
             <span
-              >Nasdaq <span class="percentage">-0.02%</span>
+              ><span class="stock-name">Nasdaq</span>
+              <span class="stock-percentage">-0.02%</span>
               <span class="material-symbols-outlined percentage">
                 arrow_downward_alt
               </span></span
@@ -140,81 +143,75 @@
       <nav>
         <ul>
           <li>
-            <a href="#"
-              >U.S.<span class="material-symbols-outlined">
-                keyboard_arrow_down
-              </span></a
-            >
+            <a href="#">U.S.<i class="fa-solid fa-chevron-down"></i></a>
           </li>
           <li>
-            <a href="#"
-              >World<span class="material-symbols-outlined">
-                keyboard_arrow_down
-              </span></a
-            >
+            <a href="#">World<i class="fa-solid fa-chevron-down"></i></a>
           </li>
           <li>
-            <a href="#"
-              >Business<span class="material-symbols-outlined">
-                keyboard_arrow_down
-              </span></a
-            >
+            <a href="#">Business<i class="fa-solid fa-chevron-down"></i></a>
           </li>
           <li>
-            <a href="#"
-              >Arts<span class="material-symbols-outlined">
-                keyboard_arrow_down
-              </span></a
-            >
+            <a href="#">Arts<i class="fa-solid fa-chevron-down"></i></a>
           </li>
           <li>
-            <a href="#"
-              >Lifestyle<span class="material-symbols-outlined">
-                keyboard_arrow_down
-              </span></a
-            >
+            <a href="#">Lifestyle<i class="fa-solid fa-chevron-down"></i></a>
           </li>
           <li>
-            <a href="#"
-              >Opinion<span class="material-symbols-outlined">
-                keyboard_arrow_down
-              </span></a
-            >
+            <a href="#">Opinion<i class="fa-solid fa-chevron-down"></i></a>
           </li>
           <li class="mid">
-            <a href="#"
-              >Audio<span class="material-symbols-outlined">
-                keyboard_arrow_down
-              </span></a
-            >
+            <a href="#">Audio<i class="fa-solid fa-chevron-down"></i></a>
           </li>
           <li>
-            <a href="#"
-              >Games<span class="material-symbols-outlined">
-                keyboard_arrow_down
-              </span></a
-            >
+            <a href="#">Games<i class="fa-solid fa-chevron-down"></i></a>
           </li>
           <li>
-            <a href="#"
-              >Cooking<span class="material-symbols-outlined">
-                keyboard_arrow_down
-              </span></a
-            >
+            <a href="#">Cooking<i class="fa-solid fa-chevron-down"></i></a>
           </li>
           <li>
-            <a href="#"
-              >Wirecutter<span class="material-symbols-outlined">
-                keyboard_arrow_down
-              </span></a
-            >
+            <a href="#">Wirecutter<i class="fa-solid fa-chevron-down"></i></a>
           </li>
           <li>
-            <a href="#"
-              >The Athletic<span class="material-symbols-outlined">
-                keyboard_arrow_down
-              </span></a
-            >
+            <a href="#">The Athletic<i class="fa-solid fa-chevron-down"></i></a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="appearing-nav">
+        <ul>
+          <li>
+            <a href="#">U.S.<i class="fa-solid fa-chevron-down"></i></a>
+          </li>
+          <li>
+            <a href="#">World<i class="fa-solid fa-chevron-down"></i></a>
+          </li>
+          <li>
+            <a href="#">Business<i class="fa-solid fa-chevron-down"></i></a>
+          </li>
+          <li>
+            <a href="#">Arts<i class="fa-solid fa-chevron-down"></i></a>
+          </li>
+          <li>
+            <a href="#">Lifestyle<i class="fa-solid fa-chevron-down"></i></a>
+          </li>
+          <li>
+            <a href="#">Opinion<i class="fa-solid fa-chevron-down"></i></a>
+          </li>
+          <li class="mid">
+            <a href="#">Audio<i class="fa-solid fa-chevron-down"></i></a>
+          </li>
+          <li>
+            <a href="#">Games<i class="fa-solid fa-chevron-down"></i></a>
+          </li>
+          <li>
+            <a href="#">Cooking<i class="fa-solid fa-chevron-down"></i></a>
+          </li>
+          <li>
+            <a href="#">Wirecutter<i class="fa-solid fa-chevron-down"></i></a>
+          </li>
+          <li>
+            <a href="#">The Athletic<i class="fa-solid fa-chevron-down"></i></a>
           </li>
         </ul>
       </nav>
@@ -261,7 +258,7 @@
                 </div>
 
                 <div class="img-article-text">
-                  <h5 class="fifth-heading">HARD FORK AUDIO</h5>
+                  <h4 class="fifth-heading">HARD FORK AUDIO</h4>
 
                   <h3 class="third-heading">
                     Here’s what we know about Mr. Altman’s sudden exit.
@@ -298,30 +295,18 @@
           </section>
 
           <section class="group-2 first-article-news-full-image">
-            <div class="list-chapters">
-              <h3>India’s Daughters</h3>
-
-              <ul>
-                <li><a href="#">Chaper 1</a></li>
-                <li><a href="#">Chaper 2</a></li>
-                <li><a href="#">Chaper 3</a></li>
-                <li><a href="#">Chaper 4</a></li>
-                <li><a href="#">Chaper 5</a></li>
-              </ul>
-            </div>
-
             <div class="full-image-article">
               <figure>
-                <a href="#"
+                <a href="#" aria-label="Article to read"
                   ><picture>
                     <source
                       media="(max-width: 740px)"
-                      srcset="images-phone/full-image-article-phone.webp"
+                      srcset="images-phone/new-newspapers-phone.webp"
                     />
 
                     <img
-                      src="images/full-image-article.webp"
-                      alt="Modern indie woman folding a blanket and looking away from the camera."
+                      src="images/old-newspapers.webp"
+                      alt="Old newspaper clippings about Chris George's 1989 kidnapping in Gaza."
                     /> </picture
                 ></a>
                 <figcaption>
@@ -333,14 +318,15 @@
 
               <a href="#"
                 ><div class="onimage-text">
-                  <h5>Chapter 5</h5>
+                  <h4>The Great Read</h4>
 
-                  <h3>An Unlikely Escape Route</h3>
+                  <h3>
+                    Can He Condemn the Killings Without Causing More Pain?
+                  </h3>
 
                   <p>
-                    A woman in modern India may find escape from the oppression
-                    of patriarchy in marriage to a man willing to challenge that
-                    system.
+                    Chris George was once a hostage in Gaza. As employees at his
+                    nonprofit ask him to speak out on the war, he’s torn.
                   </p>
                 </div></a
               >
@@ -506,15 +492,15 @@
             >
 
             <figure>
-              <a href="#"
+              <a
+                href="#"
+                aria-label="Visualisation of Formula 1 racing track in Las Vegas."
                 ><video
-                  data-testid="cinemagraph"
-                  data-play="true"
                   src="images/las-vegas-f-one.mp4"
-                  class="cinemagraph_video css-gvnats"
                   loop
                   autoplay
                   playsinline
+                  muted
                 ></video
               ></a>
 
@@ -591,38 +577,15 @@
 
                   <div class="col-2-image-part">
                     <video
-                      class="css-etyzii"
-                      preload="auto"
-                      crossorigin="anonymous"
                       loop
                       poster="https://static01.nyt.com/images/2023/11/16/autossell/GK-Cranberry-Lemon-Meringue-Pie/GK-Cranberry-Lemon-Meringue-Pie-verticalTwoByThree735.jpg?quality=75&amp;auto=webp"
                       playsinline
                       src="images/cooking-video.mp4"
                       autoplay
-                      data-seen="true"
+                      muted
                     ></video>
-
-                    <div class="navigation-buttons">
-                      <div class="navigation-dots">
-                        <span></span>
-                        <span class="active-dot"></span>
-                        <span></span>
-                        <span></span>
-                      </div>
-
-                      <div class="navigation-arrows">
-                        <span class="material-symbols-outlined">
-                          keyboard_arrow_left
-                        </span>
-
-                        <span class="material-symbols-outlined">
-                          keyboard_arrow_right
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </article></a
-              >
+                  </div></article
+              ></a>
 
               <a href="#"
                 ><article class="text-2-col">
@@ -646,7 +609,7 @@
             <div class="first-article-news-image-articles">
               <article>
                 <figure>
-                  <a href="#"
+                  <a href="#" aria-label="Meal recipe"
                     ><picture>
                       <source
                         media="(max-width: 740px)"
@@ -667,7 +630,7 @@
               </article>
               <article>
                 <figure>
-                  <a href="#">
+                  <a href="#" aria-label="Meal recipe">
                     <picture>
                       <source
                         media="(max-width: 740px)"
@@ -688,7 +651,7 @@
               </article>
               <article>
                 <figure>
-                  <a href="#"
+                  <a href="#" aria-label="Meal recipe"
                     ><picture>
                       <source
                         media="(max-width: 740px)"
@@ -709,7 +672,7 @@
               </article>
               <article>
                 <figure>
-                  <a href="#"
+                  <a href="#" aria-label="Meal recipe"
                     ><picture>
                       <source
                         media="(max-width: 740px)"
@@ -732,7 +695,7 @@
               <article>
                 <div class="image-arrow-box">
                   <figure>
-                    <a href="#"
+                    <a href="#" aria-label="Meal recipe"
                       ><picture>
                         <source
                           media="(max-width: 740px)"
@@ -759,7 +722,7 @@
           <section class="group-10 first-article-news-basic">
             <a href="#"
               ><article class="underlined-first">
-                <h5 class="fifth-heading-thicker">THE WEEKENDER</h5>
+                <h4 class="fifth-heading-thicker">THE WEEKENDER</h4>
 
                 <h3 class="third-heading-thinner important-heading">
                   Russell Brand’s Alternate Reality
@@ -815,7 +778,7 @@
             <div class="group-11-articles">
               <article>
                 <a class="quadruple-article-text" href="#">
-                  <h5 class="fifth-heading">MOVIES</h5>
+                  <h4 class="fifth-heading">MOVIES</h4>
 
                   <h3 class="third-heading">
                     In ‘Fallen Leaves’, There’s Love Among the Ruins
@@ -825,7 +788,7 @@
                 </a>
 
                 <figure class="quadruple-article-image">
-                  <a href="#"
+                  <a href="#" aria-label="Movie review"
                     ><picture>
                       <source
                         media="(max-width: 740px)"
@@ -843,7 +806,7 @@
 
               <article>
                 <a class="quadruple-article-text" href="#">
-                  <h5 class="fifth-heading">BOOKS</h5>
+                  <h4 class="fifth-heading">BOOKS</h4>
 
                   <h3 class="third-heading">
                     The Cosmic, Outrageous, Ecstatic Truths of Werner Herzog
@@ -853,7 +816,7 @@
                 </a>
 
                 <figure class="quadruple-article-image">
-                  <a href="#"
+                  <a href="#" aria-label="Book review"
                     ><picture>
                       <source
                         media="(max-width: 740px)"
@@ -871,7 +834,7 @@
 
               <article>
                 <a class="quadruple-article-text" href="#">
-                  <h5 class="fifth-heading">BOOKS</h5>
+                  <h4 class="fifth-heading">BOOKS</h4>
 
                   <h3 class="third-heading">
                     A Radical Queer Novel Challenges the Idea of History Itself
@@ -881,7 +844,7 @@
                 </a>
 
                 <figure class="quadruple-article-image">
-                  <a href="#"
+                  <a href="#" aria-label="Book review"
                     ><picture>
                       <source
                         media="(max-width: 740px)"
@@ -899,7 +862,7 @@
 
               <article>
                 <a class="quadruple-article-text" href="#">
-                  <h5 class="fifth-heading">MOVIES</h5>
+                  <h4 class="fifth-heading">MOVIES</h4>
 
                   <h3 class="third-heading">
                     ‘The Strangler’ Review: All the Pretty, Pitied Corpses
@@ -909,7 +872,7 @@
                 </a>
 
                 <figure class="quadruple-article-image">
-                  <a href="#">
+                  <a href="#" aria-label="Movie review">
                     <picture>
                       <source
                         media="(max-width: 740px)"
@@ -933,7 +896,7 @@
             <article class="image-above-text">
               <div class="group1-image">
                 <figure>
-                  <a href="#"
+                  <a href="#" aria-label="Article to read"
                     ><img class="max-width" src="images/section1.webp" alt
                   /></a>
                   <figcaption>
@@ -963,7 +926,7 @@
           <section class="aside-group-2 underlined-second-black">
             <article class="image-above-text">
               <figure class="group2-image">
-                <a href="#"
+                <a href="#" aria-label="Article to read"
                   ><picture>
                     <source
                       media="(max-width: 740px)"
@@ -993,16 +956,16 @@
 
             <article class="image-above-text">
               <figure class="group2-image">
-                <a href="#"
+                <a href="#" aria-label="Article to read"
                   ><picture>
                     <source
                       media="(max-width: 740px)"
-                      srcset="images-phone/section2-2-phone.webp"
+                      srcset="images-phone/tennis-new.webp"
                     />
 
                     <img
                       class="max-width"
-                      src="images/section2-2.webp"
+                      src="images/tennis-new.webp"
                       alt
                     /> </picture
                 ></a>
@@ -1013,8 +976,7 @@
 
               <a class="group2-text" href="#">
                 <h3 class="third-heading-smaller">
-                  How can New York City residents make building owners turn on
-                  the heat (or turn it up)?
+                  Professional tennis is broken. Here’s how to fix it.
                 </h3>
 
                 <span class="time-status">2 MIN READ</span>
@@ -1151,38 +1113,95 @@
           </section>
 
           <section class="aside-group-4 underlined-second-black">
-            <a href="#"
-              ><article class="image-above-text">
-                <h3 class="third-heading-author">David Mack</h3>
+            <div class="scroll-articles">
+              <div class="slide1">
+                <a href="#"
+                  ><article class="image-above-text">
+                    <h3 class="third-heading-author">David Mack</h3>
 
-                <h3 class="third-heading-smaller">
-                  The Sneaky Sticker-Shock of Subscription Culture
-                </h3>
+                    <h3 class="third-heading-smaller">
+                      The Sneaky Sticker-Shock of Subscription Culture
+                    </h3>
 
-                <span class="time-status"> 6 MIN READ </span>
-              </article></a
-            >
+                    <span class="time-status"> 6 MIN READ </span>
+                  </article></a
+                >
 
-            <a href="#"
-              ><article class="image-above-text">
-                <h3 class="third-heading-author">David French</h3>
+                <a href="#"
+                  ><article class="image-above-text">
+                    <h3 class="third-heading-author">David French</h3>
 
-                <h3 class="third-heading-smaller">
-                  An Old Hate Cracks Open on the New Right
-                </h3>
+                    <h3 class="third-heading-smaller">
+                      An Old Hate Cracks Open on the New Right
+                    </h3>
 
-                <span class="time-status"> 6 MIN READ </span>
-              </article></a
-            >
+                    <span class="time-status"> 6 MIN READ </span>
+                  </article></a
+                >
+              </div>
+
+              <div class="slide2">
+                <a href="#"
+                  ><article class="image-above-text">
+                    <h3 class="third-heading-author">Bob Bauer</h3>
+
+                    <h3 class="third-heading-smaller">
+                      Trump Is Not the Only Reason to Fix This Uniquely
+                      Dangerous Law
+                    </h3>
+
+                    <span class="time-status"> 5 MIN READ </span>
+                  </article></a
+                >
+
+                <a href="#"
+                  ><article class="image-above-text">
+                    <h3 class="third-heading-author">Andrea Orejarena</h3>
+
+                    <h3 class="third-heading-smaller">
+                      The Beautiful Desolation of Life on Mars — On Earth
+                    </h3>
+
+                    <span class="time-status"> 3 MIN READ </span>
+                  </article></a
+                >
+              </div>
+
+              <div class="slide3">
+                <a href="#"
+                  ><article class="image-above-text">
+                    <h3 class="third-heading-author">Jane Coaston</h3>
+
+                    <h3 class="third-heading-smaller">
+                      The Factors That Made Evangelicals Ready for Trump
+                    </h3>
+
+                    <span class="time-status"> 12 MIN READ </span>
+                  </article></a
+                >
+
+                <a href="#"
+                  ><article class="image-above-text">
+                    <h3 class="third-heading-author">Hannah Chouinard</h3>
+
+                    <h3 class="third-heading-smaller">
+                      Ladle Me a Bowl of the Midwestern Good Stuff
+                    </h3>
+
+                    <span class="time-status"> 5 MIN READ </span>
+                  </article></a
+                >
+              </div>
+            </div>
 
             <div class="navigation-article-arrows">
-              <button>
+              <button class="left-button">
                 <span class="material-symbols-outlined">
                   keyboard_arrow_left
                 </span>
               </button>
 
-              <button>
+              <button class="right-button">
                 <span class="material-symbols-outlined">
                   keyboard_arrow_right
                 </span>
@@ -1319,11 +1338,11 @@
               <picture>
                 <source
                   media="(max-width: 740px)"
-                  srcset="images-phone/new-ad-phone.jpg"
+                  srcset="images-phone/new-ad-phone.webp"
                 />
 
                 <img
-                  src="images/new-ad-desktop.jpg"
+                  src="images/new-ad-desktop.webp"
                   alt="Advertisement of Springfree trampoline."
                 />
               </picture>
@@ -1509,6 +1528,21 @@
             <h3>Well</h3>
           </div>
 
+          <div class="control-button">
+            <button aria-label="Scroll well section right" class="well-control">
+              <i class="fa-solid fa-circle-chevron-right"></i>
+            </button>
+          </div>
+
+          <div class="control-button-back">
+            <button
+              aria-label="Scroll well section left"
+              class="well-control-back"
+            >
+              <i class="fa-solid fa-circle-chevron-right"></i>
+            </button>
+          </div>
+
           <div class="well-articles full-row">
             <article class="image-above-text">
               <div class="well-1-article">
@@ -1590,12 +1624,6 @@
                     <span class="fig">Serena Blevins</span>
                   </figcaption>
                 </figure>
-
-                <div class="control-button">
-                  <button>
-                    <i class="fa-solid fa-circle-chevron-right"></i>
-                  </button>
-                </div>
               </div>
               <a href="#"
                 ><div>
@@ -1682,11 +1710,11 @@
               <picture>
                 <source
                   media="(max-width: 740px)"
-                  srcset="images-phone/new-ad-phone.jpg"
+                  srcset="images-phone/new-ad-phone.webp"
                 />
 
                 <img
-                  src="images/new-ad-desktop.jpg"
+                  src="images/new-ad-desktop.webp"
                   alt="Advertisement of Springfree trampoline."
                 />
               </picture>
@@ -1987,6 +2015,24 @@
             </div>
           </a>
 
+          <div class="control-button">
+            <button
+              aria-label="Scroll cooking section right"
+              class="cooking-control"
+            >
+              <i class="fa-solid fa-circle-chevron-right"></i>
+            </button>
+          </div>
+
+          <div class="control-button-back">
+            <button
+              aria-label="Scroll cooking section left"
+              class="cooking-control-back"
+            >
+              <i class="fa-solid fa-circle-chevron-right"></i>
+            </button>
+          </div>
+
           <div class="cooking-articles full-row">
             <article class="image-above-text">
               <div class="cooking-1-article">
@@ -2063,12 +2109,6 @@
                     <span class="fig">Mohamed Leach</span>
                   </figcaption>
                 </figure>
-
-                <div class="control-button">
-                  <button>
-                    <i class="fa-solid fa-circle-chevron-right"></i>
-                  </button>
-                </div>
               </div>
 
               <div>
@@ -2145,11 +2185,11 @@
               <picture>
                 <source
                   media="(max-width: 740px)"
-                  srcset="images-phone/new-ad-phone.jpg"
+                  srcset="images-phone/new-ad-phone.webp"
                 />
 
                 <img
-                  src="images/new-ad-desktop.jpg"
+                  src="images/new-ad-desktop.webp"
                   alt="Advertisement of Springfree trampoline."
                 />
               </picture>
@@ -2407,11 +2447,11 @@
               <picture>
                 <source
                   media="(max-width: 740px)"
-                  srcset="images-phone/new-ad-phone.jpg"
+                  srcset="images-phone/new-ad-phone.webp"
                 />
 
                 <img
-                  src="images/new-ad-desktop.jpg"
+                  src="images/new-ad-desktop.webp"
                   alt="Advertisement of Springfree trampoline."
                 />
               </picture>
@@ -3115,7 +3155,7 @@
 
                 <a href="#">
                   <img
-                    src="images/art3.jpeg"
+                    src="images/art3.webp"
                     alt="Cartoon face of an old man with a very thick mustache, eyebrows and a lot of wrinkles."
                   />
 
@@ -3621,12 +3661,12 @@
             </ul>
           </section>
           <section class="list-col5 footer-list">
-            <a href="#">
+            <a href="#" aria-label="More content">
               <h3 class="article-types-desktop-version article-types-heading">
                 MORE
               </h3>
             </a>
-            <a href="#">
+            <a href="#" aria-label="LISTINGS & MORE">
               <h3 class="article-types-phone-version article-types-heading">
                 LISTINGS & MORE
               </h3>
@@ -3662,10 +3702,9 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#">
-                    <span class="material-symbols-outlined digital">
-                      linked_services</span
-                    ><span class="li-special-text"
+                  <a class="digital" href="#">
+                    <i class="fa-solid fa-diagram-project"></i>
+                    <span class="li-special-text"
                       >Digital&nbsp;Subscriptions</span
                     >
                   </a>
@@ -3706,7 +3745,7 @@
 
         <ul class="settings-panel">
           <li class="mark-first">
-            <a href="#">© 2023 The New York Times Company</a>
+            <a href="#">© 2024 The New York Times Company</a>
           </li>
           <li><a href="#">NYTCo</a></li>
           <li><a href="#">Contact Us</a></li>
@@ -3726,7 +3765,7 @@
     </div>
 
     <div class="author-clone">
-      <a href="https://github.com/adamforgac"
+      <a href="https://github.com/adamforgac" aria-label="Author’s Github"
         ><i class="fa-brands fa-github"></i
       ></a>
     </div>

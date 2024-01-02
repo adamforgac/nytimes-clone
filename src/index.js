@@ -1,1 +1,5 @@
-// alert("Responzivita, přístupnost a ostatní věci, co nejsou dodělány, budou hotovy do 2 týdnů");
+import makeDom from './modules/dom';
+import getStockPrice from './modules/stockscall';
+
+makeDom();
+getStockPrice();
