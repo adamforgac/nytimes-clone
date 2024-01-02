@@ -146,7 +146,9 @@ table {
   --negative-numbers: rgb(166, 27, 30);
   --light-border: rgb(232, 232, 232);
   --main-par: #5a5a5a;
-  --time-status: #727272;
+  --time-status: #555555;
+  --button-hover: rgb(246, 246, 246);
+  --text-hover: rgb(80, 80, 80);
 }
 
 .mid-border {
@@ -306,7 +308,7 @@ table {
   background-color: white;
   border: none;
   border-radius: 4px;
-  color: grey;
+  color: rgb(88, 88, 88);
 }
 
 .active-theme-button {
@@ -404,7 +406,7 @@ table {
 /* TEXT */
 /* TEXT */
 
-.onimage-text h5 {
+.onimage-text h4 {
   line-height: 1.25em;
   font-size: 0.625rem;
   letter-spacing: 0.1em;
@@ -419,9 +421,9 @@ table {
 .onimage-text h3 {
   font-size: 1.75rem;
   line-height: 1.15em;
-  font-weight: 300;
+  font-weight: 700;
   color: white;
-  font-family: 'Noto Serif', serif;
+  font-family: 'Martel', serif;
   margin: 4px 0 7px 0;
 }
 
@@ -549,8 +551,11 @@ header {
   display: none;
 }
 
-.control-button {
-  display: none;
+.well-control-back,
+.cooking-control-back,
+.well-control,
+.cooking-control {
+  opacity: 0;
 }
 
 .countries-panel {
@@ -563,6 +568,14 @@ header {
 .header-icons button {
   background-color: white;
   border: none;
+  padding: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.6s background-color ease;
+}
+
+.header-icons span {
+  transform: translateY(1px);
 }
 
 .header-icons button:first-child {
@@ -579,6 +592,9 @@ header {
 
 .countries-list li {
   padding: 7px 8px 6px 8px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: 0.6s background-color ease;
 }
 
 .countries-list li a {
@@ -625,14 +641,19 @@ header {
   border: 1px solid var(--button-border);
   font-family: 'Libre Franklin', sans-serif;
   border-radius: 3px;
+  transition: 0.6s background-color ease;
 }
 
 .logo {
-  width: 430px;
+  width: 400px;
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 40%;
   transform: translate(-50%, -50%);
+}
+
+.logo-panel {
+  padding: 10px 0;
 }
 
 .logo-panel time {
@@ -643,26 +664,47 @@ header {
   letter-spacing: 0.005cm;
 }
 
-.stocks-info > span {
+.logo-panel time a {
   font-family: 'Libre Franklin', sans-serif;
   font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.stock-name {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 0.75rem;
+  transition: 0.5s;
+}
+
+.stock-info {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 
 .papers-date {
   font-weight: 500;
 }
 
-.percentage {
+.stock-percentage {
   color: var(--negative-numbers);
 }
 
-.stocks-info > span > span:nth-child(1) {
+.stock-percentage {
   margin-left: 15px;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 0.75rem;
+  transition: 0.5s;
 }
 
-.stocks-info > span > span:nth-child(2) {
-  transform: translate(-3px, 4px);
-  font-size: 1rem;
+.percentage.material-symbols-outlined {
+  transform: translate(-5px, 5px);
+  font-size: 1.1rem;
+  color: var(--negative-numbers);
 }
 
 /* NAV */
@@ -676,7 +718,20 @@ nav {
   border-top: 1px solid var(--light-border);
   border-bottom: 1px solid black;
   margin-top: 10px;
-  padding: 20px 0 31px 0;
+  min-height: 70px;
+}
+
+.appearing-nav {
+  position: fixed;
+  top: -200px;
+  width: 100vw;
+  background-color: white;
+  left: 0;
+  height: 52px;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.28);
+  border: none;
+  transition: 1s;
+  z-index: 10;
 }
 
 nav ul li {
@@ -687,10 +742,13 @@ nav ul li {
   letter-spacing: 0.05em;
 }
 
-nav ul li span {
-  transform: translateY(11px);
-  width: 7px;
-  scale: 0.7;
+nav ul li a {
+  cursor: pointer;
+}
+
+nav ul li i {
+  font-size: 0.7rem;
+  margin-left: 5px;
   color: grey;
 }
 
@@ -753,7 +811,6 @@ main {
 .first-articles .first-article-news-basic:not(:first-child) > figure img,
 .first-articles .first-article-news-basic:not(:first-child) video {
   width: 100%;
-  max-height: 95%;
 }
 
 /* TRY */
@@ -762,7 +819,7 @@ main {
 
 .first-article-news-full-image {
   display: grid;
-  grid-template-rows: min-content auto;
+  grid-auto-rows: auto;
   border-bottom: 1px solid black;
   position: relative;
   gap: 17px;
@@ -799,7 +856,7 @@ main {
   display: grid;
   grid-template-rows: repeat(3, min-content);
   position: absolute;
-  top: 30px;
+  bottom: 50px;
   left: 30px;
 }
 
@@ -848,6 +905,10 @@ main {
 .navigation-article-arrows span {
   border: 1px solid rgb(213, 213, 213);
   border-radius: 50%;
+}
+
+.left-button span {
+  color: var(--light-border);
 }
 
 .col-2-image-part {
@@ -926,6 +987,7 @@ aside {
 
 .specific-section,
 .specific-section-ad {
+  position: relative;
 }
 
 .image-above-text {
@@ -961,8 +1023,7 @@ aside {
   grid-template-columns: 1fr 1fr;
 }
 
-.aside-group-2 article:first-child,
-.aside-group-4 a:first-child article {
+.aside-group-2 article:first-child {
   padding-right: 15px;
   border-right: 1px solid var(--light-border);
 }
@@ -976,7 +1037,16 @@ aside {
   grid-template-columns: 1fr;
 }
 
-.aside-group-4 a:nth-child(2) {
+.slide1 a:first-child,
+.slide2 a:first-child,
+.slide3 a:first-child {
+  border-right: 1px solid var(--light-border);
+  padding-right: 15px;
+}
+
+.slide1 a:last-child,
+.slide2 a:last-child,
+.slide3 a:last-child {
   padding-left: 15px;
 }
 
@@ -996,8 +1066,24 @@ aside {
 
 .aside-group-4 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;
   grid-template-rows: auto auto;
+}
+
+.scroll-articles {
+  display: grid;
+  grid-auto-columns: 100%;
+  grid-auto-flow: column;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide1,
+.slide2,
+.slide3 {
+  display: flex;
 }
 
 .aside-group-6 article:last-child {
@@ -1134,8 +1220,13 @@ a {
 
 .full-row {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
   gap: 40px;
+}
+
+.well-articles {
+  position: relative;
 }
 
 .full-row article {
@@ -1516,13 +1607,21 @@ footer img {
   padding-bottom: 7px;
 }
 
-.footer-more-lists .material-symbols-outlined {
+.footer-more-lists .material-symbols-outlined, .footer-more-lists i {
   font-size: 0.9rem;
   margin-right: 4px;
 }
 
+.footer-more-lists ul li a {
+  font-size: 1rem;
+}
+
 .digital {
-  padding-right: 5px;
+  display: flex;
+}
+
+.li-special-text {
+  transform: translateX(3px);
 }
 
 .settings-panel {

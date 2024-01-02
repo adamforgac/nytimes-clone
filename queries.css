@@ -1,3 +1,26 @@
+@media (hover: hover) {
+  .header-icons button:hover {
+    background-color: var(--light-border);
+  }
+
+  .countries-list li:hover {
+    background-color: var(--light-border);
+  }
+
+  .offer-buttons a:hover {
+    background-color: rgb(44, 93, 134);
+  }
+
+  nav ul li a:hover {
+    border-bottom: 2px solid black;
+  }
+
+  article:hover,
+  .article-types p:hover {
+    color: var(--text-hover);
+  }
+}
+
 @media only screen and (max-width: 1300px) {
   .wrapper {
     width: 100%;
@@ -18,8 +41,24 @@
     grid-template-columns: 1fr;
   }
 
+  nav ul li i {
+    margin-left: 0px;
+  }
+
+  .full-row {
+    overflow: hidden;
+  }
+
   aside {
     padding-left: 0;
+  }
+
+  .well button {
+    display: unset;
+  }
+
+  .cooking button {
+    display: unset;
   }
 
   .first-article-news-image-articles::-webkit-scrollbar {
@@ -42,7 +81,7 @@
   }
 
   .first-article-news-image-articles {
-    overflow: auto;
+    overflow-x: auto;
   }
 
   .full-double-row1 {
@@ -198,8 +237,10 @@
     padding-bottom: 0;
   }
 
-  .aside-group-4 a:first-child {
-    margin-right: 20px;
+  .slide1 a,
+  .slide2 a,
+  .slide3 a {
+    width: 100%;
   }
 
   .aside-group-5 article {
@@ -338,7 +379,10 @@
     width: 100%;
     grid-auto-columns: 1fr;
     grid-auto-flow: column;
-    grid-template-columns: repeat(5, calc(33.3333% - 25px));
+    grid-template-columns: repeat(5, calc(33.3333% - 27px));
+  }
+
+  .well-articles img {
   }
 
   .first-article-news-image-articles article img {
@@ -354,17 +398,39 @@
     position: absolute;
     display: block;
     left: 100%;
-    top: 50%;
+    top: 38%;
+    z-index: 1;
     transform: translate(-50%, -50%);
     border-radius: 50%;
   }
 
-  .control-button button {
+  .cooking .control-button,
+  .cooking .control-button-back {
+    top: 45%;
+  }
+
+  .control-button-back {
+    position: absolute;
+    left: 0;
+    top: 38%;
+    z-index: 1;
+    transform: translate(-50%, -50%) rotate(180deg);
+    border-radius: 50%;
+  }
+
+  .well-control,
+  .cooking-control {
+    opacity: 1;
+  }
+
+  .control-button button,
+  .control-button-back button {
     background-color: transparent;
     border: none;
   }
 
-  .control-button i {
+  .control-button i,
+  .control-button-back i {
     font-size: 1.5rem;
   }
 
@@ -571,6 +637,10 @@
     display: none;
   }
 
+  .appearing-nav {
+    display: none;
+  }
+
   .logo-panel {
     border-top: 1px solid var(--light-border);
     padding: 12px 15px;
@@ -588,7 +658,7 @@
   }
 
   .countries-panel {
-    padding: 10px 15px;
+    padding: 10px 0px;
   }
 
   nav {
@@ -632,17 +702,8 @@
     margin-right: 0;
   }
 
-  .aside-group-4 a:nth-child(2) {
-    padding-left: 7px;
-  }
-
   .group-4 figure {
     border-bottom: 1px solid var(--light-border);
-  }
-
-  .aside-group-2 a:first-child,
-  .aside-group-4 a:first-child {
-    padding-right: 10px;
   }
 
   .quadruple-article a:first-child,
@@ -655,7 +716,14 @@
   }
 
   .onimage-text {
-    display: none;
+    width: 90%;
+  }
+
+  .well-control-back,
+  .cooking-control-back,
+  .well-control,
+  .cooking-control {
+    opacity: 0;
   }
 
   .theme-buttons {
@@ -871,7 +939,7 @@
   }
 
   .list-chapters {
-    overflow: auto;
+    overflow-x: auto;
   }
 
   .group-8 .list-chapters h3 {
@@ -879,7 +947,7 @@
   }
 
   .list-chapters ul {
-    overflow: auto;
+    overflow-x: auto;
     width: 100%;
     white-space: nowrap;
     padding: 10px 0;
@@ -914,7 +982,7 @@
 
   .first-article-news-image-articles {
     grid-template-columns: repeat(5, calc(81%)) max(0.25rem, 0.25rem);
-    overflow: auto;
+    overflow-x: auto;
   }
 
   .first-article-news-image-articles img {
@@ -1166,7 +1234,7 @@
   .full-row {
     grid-auto-columns: 1fr;
     grid-template-columns: repeat(5, calc(81%)) max(0.25rem, 0.25rem);
-    overflow: auto;
+    overflow-x: auto;
   }
 
   .full-row::-webkit-scrollbar {
@@ -1385,10 +1453,14 @@
   }
 }
 
-@media only screen and (max-width: 330px) {
+@media only screen and (max-width: 340px) {
   .logo {
     width: 120px;
     top: -24px;
+  }
+
+  .onimage-text {
+    width: 70%;
   }
 
   .header-icons button:first-child {
@@ -1420,6 +1492,25 @@
 
   .group-1 .image-article {
     grid-template-columns: 1fr 3fr;
+  }
+
+  .onimage-text h3 {
+    font-size: 0.7rem;
+    line-height: 1.3em;
+    letter-spacing: 0.01em;
+    font-weight: 700;
+  }
+
+  .onimage-text h4 {
+    font-size: 0.6rem;
+    line-height: 1.3em;
+    letter-spacing: 0.01em;
+    font-weight: 600;
+  }
+
+  .onimage-text p {
+    font-size: 0.55rem;
+    line-height: 0.6rem;
   }
 
   .third-heading {
@@ -1598,7 +1689,6 @@
     grid-template-columns: 1fr;
     grid-auto-rows: min-content;
     align-items: center;
-  
   }
 
   .logo {
@@ -1606,11 +1696,22 @@
     top: -10px;
   }
 
-  .header-icons, .phone-user  {
+  .header-icons,
+  .phone-user {
     display: none;
   }
 
-  .logo-panel time, .logo-panel span {
+  .logo-panel time,
+  .logo-panel span {
     font-size: 0.3rem;
+  }
+
+  .aside-group-2 article:first-child,
+  .aside-group-4 a:first-child article {
+    border-right: none;
+  }
+
+  .culture-main figcaption {
+    font-size: 0.7rem;
   }
 }
