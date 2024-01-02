@@ -112,7 +112,7 @@
   }
 
   .first-article-news-basic {
-    grid-template-columns: min(100%, 227px) minmax(430px, 1fr);
+    grid-template-columns: 1fr 2fr;
   }
 
   .first-articles {
