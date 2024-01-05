@@ -1,22 +1,26 @@
-const { format, subDays } = require('date-fns');
+const { sub, format } = require('date-fns');
 
 function getStockPrice() {
   const today = new Date();
-  const yesterday = subDays(today, 4);
-  const dayBefore = subDays(today, 5);
+  const yesterday = sub(today, { days: 1 });
+  const dayBefore = sub(today, { days: 2 });
 
   const formattedToday = format(today, 'yyyy-MM-dd');
   const formattedYesterday = format(yesterday, 'yyyy-MM-dd');
   const formattedDayBefore = format(dayBefore, 'yyyy-MM-dd');
 
+  console.log(formattedToday);
+  console.log(formattedDayBefore);
+  console.log(formattedYesterday);
+
   async function fetchDataAndManagePrices(stockSymbol, manageFunction) {
     try {
       const response = await fetch(
-        `https://api.polygon.io/v2/aggs/ticker/${stockSymbol}/range/1/day/${formattedDayBefore}/${formattedYesterday}?adjusted=true&sort=asc&limit=120&apiKey=qBl_JyU88JhE59kt7A0keOmf49iwKvv8`,
-        { mode: 'cors' },
+        `https://api.polygon.io/v1/open-close/${stockSymbol}/${formattedYesterday}?adjusted=true&apiKey=qBl_JyU88JhE59kt7A0keOmf49iwKvv8`,
       );
       const stocksData = await response.json();
       console.log(stocksData);
+      console.log(response);
       manageFunction(stocksData);
     } catch (error) {
       // alert(`Error fetching ${stockSymbol} data: ${error}`);
@@ -35,7 +39,7 @@ function getStockPrice() {
     const stockInfoContainer = document.querySelector('.stocks-info');
     const stockName = document.querySelector('.stock-name');
     const stockPrice = document.querySelector('.stock-percentage');
-    const stockArrow = document.querySelector('.percentage');
+    const stockArrow = document.querySelector('.stock-down');
 
     let index = 0;
 
@@ -52,11 +56,11 @@ function getStockPrice() {
         if (!stockPrice.textContent.includes('-')) {
           stockPrice.style.color = 'green';
           stockArrow.style.color = 'green';
-          stockArrow.style.transform = 'translate(-5px, 4px) rotate(180deg)';
+          stockArrow.style.transform = 'translate(-2px, -1px) rotate(180deg)';
         } else {
           stockPrice.style.color = 'var(--negative-numbers)';
           stockArrow.style.color = 'var(--negative-numbers)';
-          stockArrow.style.transform = 'translate(-5px, 5px) rotate(0)';
+          stockArrow.style.transform = 'translate(-2px, -1px) rotate(0)';
         }
 
         stockPrice.classList.remove('fade-out');
@@ -72,38 +76,38 @@ function getStockPrice() {
   }
 
   function manageNasdaq(nasdaqInfo) {
-    const firstPrice = nasdaqInfo.results[0].o;
-    const secondPrice = nasdaqInfo.results[1].o;
+    const openPrice = nasdaqInfo.open;
+    const closePrice = nasdaqInfo.close;
 
-    const changePercentage = calculatePercentageChange(firstPrice, secondPrice);
+    const changePercentage = calculatePercentageChange(openPrice, closePrice);
 
     const finalPrice = `${changePercentage.toFixed(2)}%`;
     prices.push(finalPrice);
   }
 
-  function calculatePercentageChange(todayPrice, yesterdayPrice) {
-    const priceDifference = todayPrice - yesterdayPrice;
+  function calculatePercentageChange(openPrice, closePrice) {
+    const priceDifference = openPrice - closePrice;
 
-    const percentageChange = (priceDifference / yesterdayPrice) * 100;
+    const percentageChange = (priceDifference / closePrice) * 100;
 
     return percentageChange;
   }
 
   function manageApple(appleInfo) {
-    const firstPrice = appleInfo.results[0].o;
-    const secondPrice = appleInfo.results[1].o;
+    const openPrice = appleInfo.open;
+    const closePrice = appleInfo.close;
 
-    const changePercentage = calculatePercentageChange(firstPrice, secondPrice);
+    const changePercentage = calculatePercentageChange(openPrice, closePrice);
 
     const finalPrice = `${changePercentage.toFixed(2)}%`;
     prices.push(finalPrice);
   }
 
   function manageDow(dowInfo) {
-    const firstPrice = dowInfo.results[0].o;
-    const secondPrice = dowInfo.results[1].o;
+    const openPrice = dowInfo.open;
+    const closePrice = dowInfo.close;
 
-    const changePercentage = calculatePercentageChange(firstPrice, secondPrice);
+    const changePercentage = calculatePercentageChange(openPrice, closePrice);
 
     const finalPrice = `${changePercentage.toFixed(2)}%`;
     prices.push(finalPrice);

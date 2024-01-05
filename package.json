@@ -2,7 +2,7 @@
   "name": "nytimes-clone",
   "version": "1.0.0",
   "description": "Cloning the nytimes.com",
-  "main": "babel.config.js",
+  "main": "index.js",
   "dependencies": {
     "acorn": "^8.10.0",
     "acorn-import-assertions": "^1.9.0",
@@ -301,6 +301,8 @@
     "postcss-cli": "^11.0.0",
     "postcss-loader": "^7.3.4",
     "prettier": "^3.1.1",
+    "purgecss": "^5.0.0",
+    "purgecss-webpack-plugin": "^5.0.0",
     "terser": "^5.26.0",
     "webpack": "^5.89.0"
   },

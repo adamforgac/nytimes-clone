@@ -1,0 +1,22 @@
+@media (hover: hover) {
+  .header-icons button:hover {
+    background-color: var(--light-border);
+  }
+
+  .countries-list li:hover {
+    background-color: var(--light-border);
+  }
+
+  .offer-buttons a:hover {
+    background-color: rgb(44, 93, 134);
+  }
+
+  nav ul li a:hover {
+    border-bottom: 2px solid black;
+  }
+
+  article:hover,
+  .article-types p:hover {
+    color: var(--text-hover);
+  }
+}

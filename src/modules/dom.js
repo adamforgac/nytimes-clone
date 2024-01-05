@@ -4,8 +4,8 @@ function makeDom() {
   const scrollWrapper = document.querySelector('.scroll-articles');
   const prevButton = document.querySelector('.left-button');
   const nextButton = document.querySelector('.right-button');
-  const styleLeft = document.querySelector('.left-button span');
-  const styleRight = document.querySelector('.right-button span');
+  const styleLeft = document.querySelector('.left-button i');
+  const styleRight = document.querySelector('.right-button i');
 
   // TEXT ARTICLES MOVING ARROWS
 
