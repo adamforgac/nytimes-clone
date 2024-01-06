@@ -50,7 +50,6 @@ function makeDom() {
 
   let wellIndex = 0;
   const wellWidth = wellWrapper.offsetWidth * 2 + 85;
-  console.log(wellWidth);
 
   function scrollWell() {
     wellSection.scroll({
@@ -63,7 +62,7 @@ function makeDom() {
     wellIndex = Math.min(wellIndex + 1, 1);
     wellControlButtonBack.style.opacity = '1';
     wellControlButton.style.opacity = '0';
-    console.log('works');
+
     scrollWell();
   });
 
@@ -71,7 +70,6 @@ function makeDom() {
     wellIndex = Math.min(wellIndex - 1, 1);
     wellControlButtonBack.style.opacity = '0';
     wellControlButton.style.opacity = '1';
-    console.log('works as well');
     scrollWell();
   });
 
@@ -86,7 +84,6 @@ function makeDom() {
 
   let cookingIndex = 0;
   const cookingWidth = cookingWrapper.offsetWidth * 2 + 85;
-  console.log(cookingWidth);
 
   function scrollCooking() {
     cookingSection.scroll({
@@ -99,7 +96,6 @@ function makeDom() {
     cookingIndex = Math.min(cookingIndex + 1, 1);
     cookingControlButtonBack.style.opacity = '1';
     cookingControlButton.style.opacity = '0';
-    console.log('cooking');
     scrollCooking();
   });
 
@@ -107,11 +103,8 @@ function makeDom() {
     cookingIndex = Math.min(cookingIndex - 1, 1);
     cookingControlButtonBack.style.opacity = '0';
     cookingControlButton.style.opacity = '1';
-    console.log('works as cooking');
     scrollCooking();
   });
-
-  //   SHOW MENU WHEN SCROLLING
 
   let prevScrollPos = window.pageYOffset;
   const menu = document.querySelector('.appearing-nav');
@@ -130,12 +123,9 @@ function makeDom() {
     prevScrollPos = currentScrollPos;
   });
 
-  // GIVES REAL DATE
-
   const currentDate = new Date();
 
   const formattedDate = format(currentDate, 'iiii, MMMM dd, yyyy');
-  3;
 
   const timeElement = document.getElementById('dynamicDate');
   timeElement.textContent = formattedDate;
@@ -145,5 +135,4 @@ function makeDom() {
   const copyright = document.querySelector('.mark-first a');
   copyright.textContent = `© ${currentYear} The New York Times Company`;
 }
-
 export default makeDom;

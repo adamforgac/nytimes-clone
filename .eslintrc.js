@@ -27,4 +27,7 @@ module.exports = {
     'import/no-named-as-default-member': 'off',
     'prefer-destructuring': 'off',
   },
+  ignorePatterns: [
+    'main.js', // Exclude main.js file
+  ],
 };

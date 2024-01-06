@@ -10,9 +10,11 @@
       property="og:title"
       content="The most reliable and valid news in the world"
     />
-    <script src="main.js" type="module"></script>
     <meta property="og:url" content="https://www.nytimes.com" />
-    <meta property="og:image" content="/dist/all-images/images/meta-news.jpeg" />
+    <meta
+      property="og:image"
+      content="/dist/all-images/images/meta-news.jpeg"
+    />
     <meta property="og:type" content="website" />
     <meta
       property="og:description"
@@ -20,8 +22,18 @@
     />
     <meta property="og:locale" content="en_GB" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/styles/style.css" />
-    <link rel="stylesheet" href="css/minified/critical.css">
+    <link rel="preload" href="css/minified/style.min.css" as="style" />
+    <link rel="preload" href="css/responsivity/large.css" as="style" />
+    <link rel="preload" href="css/responsivity/mobile.css" as="style" />
+    <link rel="preload" href="css/styles/hover.css" as="style" />
+    <link rel="preload" href="main.js" as="script" crossorigin="anonymous" />
+    <link rel="preload" href="https://kit.fontawesome.com/e4b054a4b4.js" as="script" crossorigin="anonymous" />
+    <script src="main.js" type="module"></script>
+    <script
+      src="https://kit.fontawesome.com/e4b054a4b4.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/minified/style.min.css" />
     <link
       rel="stylesheet"
       href="css/responsivity/large.css"
@@ -33,11 +45,7 @@
       media="only screen and (max-width: 740px)"
     />
     <link rel="stylesheet" href="css/styles/hover.css" media="(hover: hover)" />
-    <script
-      src="https://kit.fontawesome.com/e4b054a4b4.js"
-      crossorigin="anonymous"
-      defer
-    ></script>
+
     <title>
       The New York Times - Breaking News, US News, World News and Videos
     </title>
@@ -65,10 +73,10 @@
       <header>
         <div class="countries-panel">
           <div class="header-icons">
-            <button>
+            <button aria-label="Show menu">
               <i class="fa-solid fa-bars"></i>
             </button>
-            <button>
+            <button aria-label="search on web">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
           </div>
@@ -111,8 +119,8 @@
 
           <div class="stocks-info">
             <span
-              ><span class="stock-name"></span>
-              <span class="stock-percentage"></span>
+              ><span class="stock-name">Stocks</span>
+              <span class="stock-percentage">0.00%</span>
               <i class="fa-solid fa-arrow-down-long stock-down"></i>
             </span>
           </div>
@@ -1172,11 +1180,11 @@
             </div>
 
             <div class="navigation-article-arrows">
-              <button class="left-button">
+              <button aria-label="section left slider" class="left-button">
                 <i class="fa-solid fa-circle-chevron-left"></i>
               </button>
 
-              <button class="right-button">
+              <button aria-label="section right slider" class="right-button">
                 <i class="fa-solid fa-circle-chevron-right"></i>
               </button>
             </div>
@@ -3741,6 +3749,6 @@
       ></a>
     </div>
 
-    <link rel="stylesheet" href="css/minified/combined.css">
+    <link rel="stylesheet" href="css/minified/combined.css" />
   </body>
 </html>
