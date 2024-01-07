@@ -122,6 +122,112 @@ table {
   box-sizing: border-box;
 }
 
+/* FONTS */
+/* FONTS */
+/* FONTS */
+
+@font-face {
+  font-display: swap;
+  font-family: 'Libre Franklin';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/dist/fonts/libre-franklin-v14-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Libre Franklin';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/dist/fonts/libre-franklin-v14-latin-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Libre Franklin';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/dist/fonts/libre-franklin-v14-latin-600.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Libre Franklin';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/dist/fonts/libre-franklin-v14-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Martel';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/dist/fonts/martel-v10-latin/martel-v10-latin-300.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Martel';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/dist/fonts/martel-v10-latin/martel-v10-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Martel';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/dist/fonts/martel-v10-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Martel';
+  font-style: normal;
+  font-weight: 800;
+  src: url('/dist/fonts/martel-v10-latin-800.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Martel';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/dist/fonts/martel-v10-latin-900.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Noto Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/dist/fonts/noto-serif-v23-latin-regular.woff2') format('woff2'); 
+}
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Noto Serif';
+  font-style: italic;
+  font-weight: 400;
+  src: url('/dist/fonts/noto-serif-v23-latin-italic.woff2') format('woff2'); 
+}
+
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/dist/fonts/noto-serif-v23-latin-600.woff2') format('woff2'); 
+}
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Noto Serif';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/dist/fonts/noto-serif-v23-latin-700.woff2') format('woff2'); 
+}
+
 /* REUSABLE */
 /* REUSABLE */
 /* REUSABLE */
