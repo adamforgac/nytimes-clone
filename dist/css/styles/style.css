@@ -255,7 +255,7 @@ table {
 
 .text-image-2-col {
   display: grid;
-  grid-template-columns: clamp(290px, 300px, 300px) auto;
+  grid-template-columns: 1fr 0.7fr;
   padding-right: 17px;
   gap: 20px;
   border-right: 1px solid var(--light-border);
@@ -272,7 +272,7 @@ table {
 
 .col-2-article {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 3fr 1fr;
 }
 
 .first-article-news-image-showroom {
@@ -895,6 +895,11 @@ main {
   display: grid;
   grid-template-rows: auto min-content;
   gap: 20px;
+}
+
+.col-2-image-part img {
+  width: 100%;
+  height: auto;
 }
 
 .navigation-dots span {
