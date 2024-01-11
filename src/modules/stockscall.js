@@ -2,15 +2,17 @@ const { sub, format } = require('date-fns');
 
 function getStockPrice() {
   const today = new Date();
-  const yesterday = sub(today, { days: 2 });
+  const yesterday = sub(today, { days: 1 });
 
   const formattedYesterday = format(yesterday, 'yyyy-MM-dd');
+  console.log(formattedYesterday);
 
   async function getNasdaq() {
     const response = await fetch(
       `https://api.polygon.io/v1/open-close/NDAQ/${formattedYesterday}?adjusted=true&apiKey=qBl_JyU88JhE59kt7A0keOmf49iwKvv8`,
     );
     const stocksData = await response.json();
+    console.log(stocksData);
     addToStockObjects(stocksData, 'Nasdaq');
   }
 
@@ -19,15 +21,17 @@ function getStockPrice() {
       `https://api.polygon.io/v1/open-close/AAPL/${formattedYesterday}?adjusted=true&apiKey=qBl_JyU88JhE59kt7A0keOmf49iwKvv8`,
     );
     const stocksData = await response.json();
+    console.log(stocksData);
     addToStockObjects(stocksData, 'Apple');
   }
 
   async function getDow() {
     const response = await fetch(
-      `https://api.polygon.io/v1/open-close/DOW/${formattedYesterday}?adjusted=true&apiKey=qBl_JyU88JhE59kt7A0keOmf49iwKvv8`,
+      `https://api.polygon.io/v1/open-close/AMZN/${formattedYesterday}?adjusted=true&apiKey=qBl_JyU88JhE59kt7A0keOmf49iwKvv8`,
     );
     const stocksData = await response.json();
-    addToStockObjects(stocksData, 'Dow');
+    console.log(stocksData);
+    addToStockObjects(stocksData, 'Amazon');
   }
 
   const asyncFunctions = [getNasdaq(), getApple(), getDow()];

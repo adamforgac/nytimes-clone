@@ -131,7 +131,8 @@ table {
   font-family: 'Libre Franklin';
   font-style: normal;
   font-weight: 400;
-  src: url('../styles/fonts/libre-franklin-v14-latin/libre-franklin-v14-latin-regular.woff2') format('woff2');
+  src: url('../styles/fonts/libre-franklin-v14-latin/libre-franklin-v14-latin-regular.woff2')
+    format('woff2');
 }
 
 @font-face {
@@ -139,7 +140,8 @@ table {
   font-family: 'Libre Franklin';
   font-style: normal;
   font-weight: 500;
-  src: url('../styles/fonts/libre-franklin-v14-latin-500.woff2') format('woff2');
+  src: url('../styles/fonts/libre-franklin-v14-latin/libre-franklin-v14-latin-500.woff2')
+    format('woff2');
 }
 
 @font-face {
@@ -147,14 +149,16 @@ table {
   font-family: 'Libre Franklin';
   font-style: normal;
   font-weight: 600;
-  src: url('../styles/fonts/libre-franklin-v14-latin-600.woff2') format('woff2');
+  src: url('../styles/fonts/libre-franklin-v14-latin/libre-franklin-v14-latin-600.woff2')
+    format('woff2');
 }
 @font-face {
   font-display: swap;
   font-family: 'Libre Franklin';
   font-style: normal;
   font-weight: 700;
-  src: url('../styles/fonts/libre-franklin-v14-latin-700.woff2') format('woff2');
+  src: url('../styles/fonts/libre-franklin-v14-latin/libre-franklin-v14-latin-700.woff2')
+    format('woff2');
 }
 
 @font-face {
@@ -162,7 +166,8 @@ table {
   font-family: 'Martel';
   font-style: normal;
   font-weight: 300;
-  src: url('../styles/fonts/martel-v10-latin/martel-v10-latin-300.woff2') format('woff2');
+  src: url('../styles/fonts/martel-v10-latin/martel-v10-latin-300.woff2')
+    format('woff2');
 }
 
 @font-face {
@@ -170,7 +175,8 @@ table {
   font-family: 'Martel';
   font-style: normal;
   font-weight: 400;
-  src: url('../styles/fonts/martel-v10-latin/martel-v10-latin-regular.woff2') format('woff2');
+  src: url('../styles/fonts/martel-v10-latin/martel-v10-latin-regular.woff2')
+    format('woff2');
 }
 
 @font-face {
@@ -178,7 +184,8 @@ table {
   font-family: 'Martel';
   font-style: normal;
   font-weight: 700;
-  src: url('../styles/fonts/martel-v10-latin-700.woff2') format('woff2');
+  src: url('../styles/fonts/martel-v10-latin/martel-v10-latin-700.woff2')
+    format('woff2');
 }
 
 @font-face {
@@ -186,7 +193,8 @@ table {
   font-family: 'Martel';
   font-style: normal;
   font-weight: 800;
-  src: url('../styles/fonts/martel-v10-latin/martel-v10-latin-800.woff2') format('woff2');
+  src: url('../styles/fonts/martel-v10-latin/martel-v10-latin-800.woff2')
+    format('woff2');
 }
 
 @font-face {
@@ -194,39 +202,44 @@ table {
   font-family: 'Martel';
   font-style: normal;
   font-weight: 900;
-  src: url('../styles/fonts/martel-v10-latin-900.woff2') format('woff2');
+  src: url('../styles/fonts/martel-v10-latin/martel-v10-latin-900.woff2')
+    format('woff2');
 }
 
 @font-face {
-  font-display: swap; 
+  font-display: swap;
   font-family: 'Noto Serif';
   font-style: normal;
   font-weight: 400;
-  src: url('../styles/fonts/noto-serif-v23-latin-regular.woff2') format('woff2'); 
+  src: url('../styles/fonts/noto-serif-v23-latin/noto-serif-v23-latin-regular.woff2')
+    format('woff2');
 }
 
 @font-face {
-  font-display: swap; 
+  font-display: swap;
   font-family: 'Noto Serif';
   font-style: italic;
   font-weight: 400;
-  src: url('../styles/fonts/noto-serif-v23-latin-italic.woff2') format('woff2'); 
+  src: url('../styles/fonts/noto-serif-v23-latin/noto-serif-v23-latin-italic.woff2')
+    format('woff2');
 }
 
 @font-face {
-  font-display: swap; 
+  font-display: swap;
   font-family: 'Noto Serif';
   font-style: normal;
   font-weight: 600;
-  src: url('../styles/fonts/noto-serif-v23-latin/noto-serif-v23-latin-600.woff2') format('woff2'); 
+  src: url('../styles/fonts/noto-serif-v23-latin/noto-serif-v23-latin-600.woff2')
+    format('woff2');
 }
 
 @font-face {
-  font-display: swap; 
+  font-display: swap;
   font-family: 'Noto Serif';
   font-style: normal;
   font-weight: 700;
-  src: url('../styles/fonts/noto-serif-v23-latin-700.woff2') format('woff2'); 
+  src: url('../styles/fonts/noto-serif-v23-latin/noto-serif-v23-latin-700.woff2')
+    format('woff2');
 }
 
 /* REUSABLE */
@@ -640,6 +653,11 @@ header {
   opacity: 0;
 }
 
+.control-button button i,
+.control-button-back button i {
+  color: black;
+}
+
 .countries-panel {
   display: flex;
   align-items: center;
@@ -654,10 +672,12 @@ header {
   border-radius: 3px;
   cursor: pointer;
   transition: 0.6s background-color ease;
+  color: black;
 }
 
-.header-icons span {
-  transform: translateY(1px);
+.header-icons button i {
+  font-size: 1rem;
+  color: black;
 }
 
 .header-icons button:first-child {
@@ -989,13 +1009,16 @@ main {
   border: none;
 }
 
-.navigation-arrows i,
-.navigation-article-arrows i {
+.left-button i,
+.left-button {
+  color: rgb(232, 232, 232);
   font-size: 1.2rem;
 }
 
-.left-button i {
-  color: var(--light-border);
+.right-button i,
+.right-button {
+  color: black;
+  font-size: 1.2rem;
 }
 
 .col-2-image-part {
