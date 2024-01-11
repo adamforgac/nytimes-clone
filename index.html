@@ -25,8 +25,6 @@
     <title>
       The New York Times - Breaking News, US News, World News and Videos
     </title>
-    <link rel="preload" href="css/minified/style.min.css" as="style" />
-    <link rel="preload" href="css/minified/queries-min.css" as="style" />
     <link rel="preload" href="main.js" as="script" crossorigin="anonymous" />
     <link
       rel="preload"
@@ -483,16 +481,23 @@
             >
 
             <figure>
-              <a href="#">
-                <img
-                  src="images/formula-one-plan.webp"
-                  loading="lazy"
-                  alt="Plan of Formula one race track in Las Vegas"
-                />
-              </a>
+              <a href="#"
+                ><picture>
+                  <source
+                    media="(max-width: 740px)"
+                    srcset="images-phone/formula-one-plan-phone.webp"
+                  />
+
+                  <img
+                    class="article-4-image"
+                    src="images/formula-one-plan.webp"
+                    alt="Formula one race track plan in Las Vegas"
+                    loading="lazy"
+                  /> </picture
+              ></a>
 
               <figcaption>
-                <span class="fig">Melissa Schriek for The New York Times</span>
+                <span class="fig">Formula one for The New York Times</span>
               </figcaption>
             </figure>
           </section>
