@@ -653,6 +653,11 @@ header {
   opacity: 0;
 }
 
+.control-button,
+.control-button-back {
+  display: none;
+}
+
 .control-button button i,
 .control-button-back button i {
   color: black;

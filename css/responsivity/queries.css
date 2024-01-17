@@ -432,6 +432,7 @@
     z-index: 1;
     transform: translate(-50%, -50%) rotate(180deg);
     border-radius: 50%;
+    display: block;
   }
 
   .well-control,
